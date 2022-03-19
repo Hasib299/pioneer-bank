@@ -4,9 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Pioneer Bank</title>
   </head>
   <body>
-    <h1>Welcome to pioneer Bank</h1>
+    <div id="login-section">
+      <h1 class="text-center">Welcome to pioneer Bank</h1>
+      <div class="login-aria mt-5">
+        <b>Login</b>
+        <form class="login-form mt-4">
+          <input
+            placeholder="enter email@"
+            class="form-control mb-3"
+            type="email"
+            name="email"
+            id="email"
+          />
+          <input
+            placeholder="Password"
+            class="form-control mb-3"
+            type="password"
+            name="password"
+            id="password"
+          />
+          <input type="button" id="loginSubmit" class="btn btn-primary" value="LogIn" />
+        </form>
+      </div>
+    </div>
+
+    <div id="transaction-section">
+      <div class="transaction-aria mb-5">
+        <h1>Transaction Aria</h1>
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-4">
+            <div class="deposit">
+              <b><h2>Deposit</h2></b>
+              <strong><h1>$00</h1></strong>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="withdraw">
+              <b><h1>Withdraw</h1></b>
+              <strong><h1>$00</h1></strong>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="balance">
+              <b><h1>Balance</h1></b>
+              <strong><h1>$00</h1></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="transaction-input">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <div class="transaction-card">
+                Deposit
+                <input type="text" name="deposit" placeholder="$ amount you want to deposit" id="" class="form-control my-4">
+                <input type="button" value="Submit" class="btn btn-success">
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="transaction-card">
+                Withdraw
+                <input type="text" name="withdraw"  placeholder="$ amount you want to withdraw" id="" class="form-control my-4">
+                <input type="button" value="Submit" class="btn btn-success">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+
+        const loginBtn =document.getElementById('loginSubmit')
+        loginBtn.addEventListener('click', (e) =>{
+            const logInSection = document.getElementById('login-section')
+            logInSection.style.display = 'none'
+            
+            const transactionSection = document.getElementById('transaction-section')
+            transactionSection.style.display = 'block'
+        })
+
+    </script>
   </body>
 </html>
