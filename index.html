@@ -33,7 +33,7 @@
             name="password"
             id="password"
           />
-          <input type="button" id="loginSubmit" class="btn btn-primary" value="LogIn" />
+          <input  type="button"  id="loginSubmit" class="btn btn-primary" value="LogIn" />
         </form>
       </div>
     </div>
@@ -45,19 +45,19 @@
           <div class="col-md-4">
             <div class="deposit">
               <b><h2>Deposit</h2></b>
-              <strong><h1>$00</h1></strong>
+              <strong><h1>$ <span id="depositDis">00</span> </h1></strong>
             </div>
           </div>
           <div class="col-md-4">
             <div class="withdraw">
-              <b><h1>Withdraw</h1></b>
-              <strong><h1>$00</h1></strong>
+              <b><h1 >Withdraw</h1></b>
+              <strong><h1>$ <span id="withdrawDis">00</span></h1></strong>
             </div>
           </div>
           <div class="col-md-4">
             <div class="balance">
-              <b><h1>Balance</h1></b>
-              <strong><h1>$00</h1></strong>
+              <b><h1 >Balance</h1></b>
+              <strong><h1>$ <span id="balanceDis">00</span></h1></strong>
             </div>
           </div>
         </div>
@@ -67,34 +67,26 @@
           <div class="col-md-6">
             <div class="transaction-card">
                 Deposit
-                <input type="text" name="deposit" placeholder="$ amount you want to deposit" id="" class="form-control my-4">
-                <input type="button" value="Submit" class="btn btn-success">
+                <input type="number" min="5" name="deposit" placeholder="$ amount you want to deposit" id="depositInput" class="form-control my-4">
+                <input type="button" value="Deposit" id="depositBtn" class="btn btn-success">
 
             </div>
           </div>
           <div class="col-md-6">
             <div class="transaction-card">
                 Withdraw
-                <input type="text" name="withdraw"  placeholder="$ amount you want to withdraw" id="" class="form-control my-4">
-                <input type="button" value="Submit" class="btn btn-success">
+                <input type="number" min="5" name="withdraw"  placeholder="$ amount you want to withdraw" id="withdrawInput" class="form-control my-4">
+                <input type="button" value="Withdraw" id="withdrawBtn" class="btn btn-success">
 
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <script>
 
-        const loginBtn =document.getElementById('loginSubmit')
-        loginBtn.addEventListener('click', (e) =>{
-            const logInSection = document.getElementById('login-section')
-            logInSection.style.display = 'none'
-            
-            const transactionSection = document.getElementById('transaction-section')
-            transactionSection.style.display = 'block'
-        })
-
+    <script src="./js/index.js">
     </script>
+
+  
   </body>
 </html>
